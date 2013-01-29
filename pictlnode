@@ -3,21 +3,15 @@
 #
 NAME=piControl
 APP=/opt/piControl/app.js
-forever=/usr/bin/forever
+forever=forever
 
 case "$1" in
   start)
 	echo "Starting $NAME"
-	if ls /path/to/your/$NAME &> /dev/null; then
-		echo "$NAME already running."
-	else
-		touch /var/run/$NAME
-		$forever start $APP
-	fi
+	$forever start $APP
     ;;
   stop)
-	echo "Stopping script blah"
-	rm /var/run/$NAME
+	echo "Stopping script $NAME"
 	$forever stop $APP
     ;;
   *)

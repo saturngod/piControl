@@ -36,7 +36,7 @@ http.createServer(function (req, res) {
 	else
 	{
 		res.writeHead(200);
-		var fileData = fs.readFileSync("./index.html");
+		var fileData = fs.readFileSync(__dirname + "/index.html");
 		res.end(fileData);
 	}
 	res.end(); 
