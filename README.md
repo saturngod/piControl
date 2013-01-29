@@ -1,5 +1,3 @@
-***TEST VERSION AND NOT READY YET***
-
 piControl is allow reboot and shutdown from browser in local network. It's using node.js.
 
 ## Install Node.js
@@ -28,6 +26,11 @@ If you want to install node.js automatically , call
 	
 Copy all files to /opt/piControl/
 
+or you can make git clone
+
+	cd /opt
+	sudo git clone git://github.com/saturngod/piControl.git piControl
+
 ## Edit Control file
 
 Open the pictlnode.
@@ -39,6 +42,7 @@ Edit **forever** and **APP** path.
 	sudo cp /opt/piControl/pictlnode /etc/init.d/pictlnode
 	sudo chmod +x /etc/init.d/pictlnode
 	update-rc.d pictlnode defaults
+	sudo insserv pictlnode
 	reboot
 	
 After reboot , check your ip first.
