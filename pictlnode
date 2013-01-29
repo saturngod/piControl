@@ -1,0 +1,29 @@
+#! /bin/sh
+# /etc/init.d/piControl
+#
+NAME=piControl
+APP=/opt/piControl/app.js
+forever=/usr/bin/forever
+
+case "$1" in
+  start)
+	echo "Starting $NAME"
+	if ls /path/to/your/$NAME &> /dev/null; then
+		echo "$NAME already running."
+	else
+		touch /var/run/$NAME
+		$forever start $APP
+	fi
+    ;;
+  stop)
+	echo "Stopping script blah"
+	rm /var/run/$NAME
+	$forever stop $APP
+    ;;
+  *)
+    echo "Usage: /etc/init.d/pictlnode {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
