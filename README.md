@@ -37,7 +37,7 @@ Edit **forever** and **APP** path.
 ## Create Service
 
 	sudo cp /opt/piControl/pictlnode /etc/init.d/pictlnode
-	sudo chmod +x pictlnode
+	sudo chmod +x /etc/init.d/pictlnode
 	update-rc.d pictlnode defaults
 	reboot
 	

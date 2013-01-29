@@ -18,7 +18,7 @@ http.createServer(function (req, res) {
 		child = exec("shutdown -t 0", function (error, stdout, stderr) {
 			res.end("Shutdown...");
 		});
-		
+		res.write('connecting...');
 	}
 	else if(current_url==restart)
 	{
@@ -26,6 +26,7 @@ http.createServer(function (req, res) {
 		child = exec("reboot", function (error, stdout, stderr) {
 			res.end("Reboot...");
 		});
+		res.write('connecting...');
 	}
 	else if(current_url.match(png))
 	{
