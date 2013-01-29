@@ -14,7 +14,8 @@
 
 NAME=piControl
 APP=/opt/piControl/app.js
-forever=forever
+forever=/usr/local/bin/forever
+export PATH=$PATH:/usr/local/bin/
 
 case "$1" in
   start)
@@ -25,8 +26,12 @@ case "$1" in
 	echo "Stopping script $NAME"
 	$forever stop $APP
     ;;
+  list)
+	echo "List"
+	$forever list
+    ;;
   *)
-    echo "Usage: /etc/init.d/pictlnode {start|stop}"
+    echo "Usage: /etc/init.d/pictlnode {start|stop|list}"
     exit 1
     ;;
 esac

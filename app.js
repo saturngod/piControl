@@ -15,7 +15,7 @@ http.createServer(function (req, res) {
 	if(current_url==shutdown)
 	{
 		res.writeHead(200);
-		child = exec("shutdown -t 0", function (error, stdout, stderr) {
+		child = exec("shutdown -h now", function (error, stdout, stderr) {
 			res.end("Shutdown...");
 		});
 		res.write('connecting...');
