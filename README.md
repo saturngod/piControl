@@ -10,7 +10,7 @@ piControl is allow reboot and shutdown from browser in local network. It's using
 	sudo make
 	sudo make install
 	
-The make process can take quite a while, well over an hour in most case.
+The make process can take quite a while, well over **a hour** in most case.
 
 If you want to install node.js automatically , call
 

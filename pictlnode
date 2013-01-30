@@ -2,16 +2,6 @@
 # /etc/init.d/piControl
 #
 
-### BEGIN INIT INFO
-# Provides: piControl
-# Required-Start:
-# Required-Stop:
-# Default-Start: 2 3 4 5
-# Default-Stop: 0 1 6
-# Short-Description: Run node pi control on boot
-# Description:
-### END INIT INFO
-
 NAME=piControl
 APP=/opt/piControl/app.js
 forever=/usr/local/bin/forever
