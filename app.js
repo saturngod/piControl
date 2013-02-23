@@ -31,7 +31,7 @@ http.createServer(function (req, res) {
 	else if(current_url.match(png))
 	{
 		result=current_url.match(png);
-		var fileData = fs.readFileSync("."+result[0]);
+		var fileData = fs.readFileSync(__dirname+result[0]);
 		res.end(fileData);
 	}
 	else
