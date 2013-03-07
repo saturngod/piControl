@@ -21,5 +21,31 @@ $(document).ready(function() {
 			}
 		})
 	});
+
+	$(".danger").click(function()
+	{
+		var href = $(this).attr("href");
+
+		$(".loading").fadeIn();
+		$(".message").html($(this).html() + "...");
+
+		$.ajax({
+			type:"GET",
+			url :href,
+			success:(function(data,status){
+				$(".loading").fadeOut(2000);
+			}),
+			error:(function(){
+				$(".message").html("Error!");
+
+				$(".loading").fadeOut(function(){
+					$(".loading").fadeIn(function(){
+						$(".loading").fadeOut(2000);
+					});
+				});
+			})
+		});
+		return false;
+	});
 });
 

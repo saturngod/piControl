@@ -31,7 +31,6 @@ http.createServer(function (req, res) {
 		child = exec("reboot", function (error, stdout, stderr) {
 			res.end("Reboot...");
 		});
-		res.write('Reboot...');
 	});
 	
 	piRoute.get(getfreedisk,function(req,res)

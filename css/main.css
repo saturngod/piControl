@@ -97,3 +97,20 @@ progress[aria-valuenow]:before  {
 	padding-left:10px;
 	padding-right: 10px;
 }
+
+.message {
+	background: #FFF;
+	text-align: center;
+	font-size: 300%;
+	top:37%;
+	position: fixed;
+	width: 100%;
+}
+
+.loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	display: none;
+}
