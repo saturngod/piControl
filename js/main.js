@@ -7,16 +7,14 @@ $(document).ready(function() {
 			for(i=0 ; i < data.length ; i++)
 			{
 				drive = data[i];
-
+				used = drive.total - drive.free;
 				el = $("#template").html();
 				el = el.replace(/{{name}}/g,drive.name);
-				el = el.replace(/{{total}}/g,drive.total);
-				el = el.replace(/{{used}}/g,drive.total - drive.free);
-				
+				el = el.replace(/{{percentage}}/g,parseInt((used*100)/drive.total));
 
-				el = el.replace(/{{used_gb}}/g,(drive.total - drive.free)/1073741824);
-				el = el.replace(/{{free_gb}}/g,drive.free/1073741824);
-				el = el.replace(/{{total_gb}}/g,drive.total/1073741824);
+				el = el.replace(/{{used_gb}}/g,((used)/1073741824).toFixed(2));
+				el = el.replace(/{{free_gb}}/g,(drive.free/1073741824).toFixed(2));
+				el = el.replace(/{{total_gb}}/g,(drive.total/1073741824).toFixed(2));
 				$("#drives").append(el);
 			}
 		})

@@ -35,8 +35,10 @@
 		<div style="display:none" id="template">
 			<div class="disk">
 				<p><b>{{name}}</b></p>
-				<progress max="{{total}}" value="{{used}}">
-				</progress>
+				<div id="prgoress">
+    				<div id="progress_bg">&nbsp;</div>
+    				<div id="progress_value">{{percentage}}%</div>
+				</div>
 				<br/><br/>
 				<b>Used:</b> {{used_gb}} GB ,
 				<b>Free:</b> {{free_gb}} GB ,
