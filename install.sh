@@ -5,3 +5,4 @@ cd node-v0.8.18
 ./configure
 make
 make install
+npm install freedisk

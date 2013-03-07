@@ -1,0 +1,99 @@
+.danger {
+	text-decoration:none;
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+	background-color: rgb(216, 74, 56);
+	color:#FFF;
+	width:90%;
+	padding-bottom: 10px;
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-top: 10px;
+	display:inline-table;
+}
+.center {
+	width:95%;
+	padding:0px;
+	margin:0px auto;
+	text-align:center;
+}
+body {
+	padding:0px;
+	margin:0px;
+	font-family:Arial;
+	background:#EEE;
+}
+
+h1 {
+	padding-top:10px;
+	color:#2222;
+}
+
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+{
+
+	/* Turns off styling - not usually needed, but good to know. */
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	/* gets rid of default border in Firefox and Opera. */ 
+	border: none;
+
+	/* Needs to be in here for Safari polyfill so background images work as expected. */
+	background-size: auto;
+	
+	/* Dimensions */
+	width: 100%;
+	height: 30px;
+	
+}
+
+/* Polyfill */
+progress[role]:after {
+	background-image: none; /* removes default background from polyfill */
+}
+
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+	display: none;
+}
+
+/** Background **/
+progress,                          /* Firefox  */ 
+progress[role][aria-valuenow] {    /* Polyfill */
+   background: #f68f76 !important; /* !important is needed by the polyfill */
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: #f7b1a4;
+}
+
+/** Bar Value **/
+/* IE10 */
+progress {
+    color: #e75c4d;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: #e75c4d;	
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: #e75c4d;
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: #e75c4d;
+}
+
+.disk {
+	
+	display: inline-block;
+	padding-left:10px;
+	padding-right: 10px;
+}

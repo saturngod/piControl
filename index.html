@@ -7,47 +7,39 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="Icon-72.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="Icon-72@2x.png" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-<style>
-.danger {
-	text-decoration:none;
-	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-	background-color: rgb(216, 74, 56);
-	color:#FFF;
-	width:100%;
-	padding-bottom: 10px;
-	padding-left: 14px;
-	padding-right: 14px;
-	padding-top: 10px;
-	display:inline-table;
-}
-.center {
-	width:95%;
-	padding:0px;
-	margin:0px auto;
-	text-align:center;
-}
-body {
-	padding:0px;
-	margin:0px;
-	font-family:Arial;
-	background:#EEE;
-}
-
-h1 {
-	padding-top:10px;
-	color:#2222;
-}
-</style>
+	<script type="text/javascript" src="./js/zepto.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
 	
 	<div class="center">
 		<h1>Raspberry Pi Control</h1>
 		<p>
-	<a href="/shutdown" class="danger">Shutdown</a>
-</p>
-<p>
-	<a href="/restart" class="danger">Reboot</a></p>
+			<a href="/shutdown" class="danger">Shutdown</a>
+		</p>
+		<p>
+			<a href="/restart" class="danger">Reboot</a>
+		</p>
 
-</div>
+
+		<div id="diskspace">
+			<h1>Disk</h1>
+			<div id="drives">
+
+			</div>
+		</div>
+		<div style="display:none" id="template">
+			<div class="disk">
+				<p><b>{{name}}</b></p>
+				<progress max="{{total}}" value="{{used}}">
+				</progress>
+				<br/><br/>
+				<b>Used:</b> {{used_gb}} GB ,
+				<b>Free:</b> {{free_gb}} GB ,
+				<b>Total:</b> {{total_gb}} GB 
+			</div>
+		</div>
+	
+	</div>
 </html>

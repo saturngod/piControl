@@ -53,3 +53,8 @@ After you know the IP , call ***http://[your_ip_address]:1337*** from any browse
 
 Recommend to use static IP to control the raspberry pi.
 
+
+
+## Todo 
+
+- Make installer like `npm install picontrol` and everything done.
