@@ -54,6 +54,19 @@ After you know the IP , call ***http://[your_ip_address]:1337*** from any browse
 Recommend to use static IP to control the raspberry pi.
 
 
+## API
+
+### Shutdown
+
+http://[yourip]:1337/shutdown
+
+### Restart
+
+http://[yourip]:1337/restart
+
+### Free Space
+
+http://[yourip]:1337/freedisk
 
 ## Todo 
 
