@@ -41,7 +41,7 @@ function convertToBytes(size)
 	size = fulltrim(size);
 	var last2 = size.slice(-2);
 	var actual = parseInt(size.substr(0,size.length-2));
-
+	
 	if(last2=="Ti")
 	{
 		//Tera Bytes
@@ -66,6 +66,35 @@ function convertToBytes(size)
 	{
 		//Bytes
 		return actual;
+	}
+	else {
+		var last = size.slice(-1);
+		var actual = parseInt(size.substr(0,size.length-1));
+		if(last=="T")
+		{
+			//Tera Bytes
+			return actual*1024*1024*1024*1024;
+		}
+		if(last=="G")
+		{
+			//Giga Bytes
+			return actual*1024*1024*1024;
+		}
+		else if(last=="M")
+		{
+			//Mega Bytes
+			return actual*1024*1024;
+		}
+		else if(last=="K")
+		{
+			//Kilo Bytes
+			return actual*1024;
+		}
+		else if(last=="B")
+		{
+			//Bytes
+			return actual;
+		}
 	}
 }
 
