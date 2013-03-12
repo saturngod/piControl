@@ -7,7 +7,7 @@ $(document).ready(function() {
 			for(i=0 ; i < data.length ; i++)
 			{
 				drive = data[i];
-				used = drive.total - drive.free;
+				used = parseInt(drive.total) - parseInt(drive.free);
 				el = $("#template").html();
 				el = el.replace(/{{name}}/g,drive.name);
 				el = el.replace(/{{percentage}}/g,parseInt((used*100)/drive.total));
