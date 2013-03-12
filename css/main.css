@@ -41,6 +41,7 @@ h1 {
 	top:37%;
 	position: fixed;
 	width: 100%;
+	z-index:999999;
 }
 
 .loading {
@@ -49,6 +50,7 @@ h1 {
 	height: 100%;
 	background: rgba(0,0,0,.5);
 	display: none;
+	z-index:99999;
 }
 
 
